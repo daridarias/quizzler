@@ -23,19 +23,19 @@
                                 <rect key="frame" x="16" y="59" width="361" height="759"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OzN-D7-moh">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="83.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="63"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" red="0.93333333330000001" green="0.89019607840000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5av-Nt-Zng">
-                                        <rect key="frame" x="0.0" y="93.333333333333343" width="361" height="465.66666666666663"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Question Text" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5av-Nt-Zng">
+                                        <rect key="frame" x="0.0" y="73" width="361" height="396"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="k28-v5-hg5">
-                                        <rect key="frame" x="0.0" y="569" width="361" height="80"/>
+                                        <rect key="frame" x="0.0" y="479" width="361" height="80"/>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" button="YES" image="YES"/>
                                         </accessibility>
@@ -45,9 +45,25 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" red="0.93333333330000001" green="0.89019607840000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="True" backgroundImage="Rectangle"/>
+                                        <state key="normal" title="Choice 1" backgroundImage="Rectangle"/>
                                         <connections>
                                             <action selector="anwerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pMx-4S-DJN"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nHz-RO-O68">
+                                        <rect key="frame" x="0.0" y="569" width="361" height="80"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                        </accessibility>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="80" id="Hda-OS-WyA"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <color key="tintColor" red="0.93333333330000001" green="0.89019607840000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Choice 2" backgroundImage="Rectangle"/>
+                                        <connections>
+                                            <action selector="anwerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blf-bG-P6F"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sDO-ir-hKY">
@@ -61,7 +77,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <color key="tintColor" red="0.93333333330000001" green="0.89019607840000003" blue="0.79607843140000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                        <state key="normal" title="False" backgroundImage="Rectangle"/>
+                                        <state key="normal" title="Choice 3" backgroundImage="Rectangle"/>
                                         <connections>
                                             <action selector="anwerButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jR7-rf-scD"/>
                                         </connections>
@@ -93,11 +109,12 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="falseButton" destination="sDO-ir-hKY" id="Gw5-Lf-gfK"/>
+                        <outlet property="choiceOne" destination="k28-v5-hg5" id="N3i-38-EFe"/>
+                        <outlet property="choiceThree" destination="sDO-ir-hKY" id="Gw5-Lf-gfK"/>
+                        <outlet property="choiceTwo" destination="nHz-RO-O68" id="mPq-EM-TX1"/>
                         <outlet property="progressBar" destination="zIz-I6-c5M" id="6Pl-BP-dbz"/>
                         <outlet property="questionLabel" destination="5av-Nt-Zng" id="FII-Cw-U5K"/>
                         <outlet property="scoreLabel" destination="OzN-D7-moh" id="3RU-gc-YWz"/>
-                        <outlet property="trueButton" destination="k28-v5-hg5" id="N3i-38-EFe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
